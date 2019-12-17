@@ -47,26 +47,15 @@ class Exercises extends React.Component {
         if (this.state.error)
             return <FatalError />
         return(
-            <div>
-                <Welcome userName="Eber Ortiz"/>
-                {/* {
-                    this.state.data.map((exercise) => {
-                        return (
-                            <Card
-                                title={exercise.title}
-                                description={exercise.description}
-                                img={exercise.img}
-                                leftColor={exercise.leftColor}
-                                rightColor={exercise.rightColor}
-                            />
-                        )
-                    })
-                } */}
-                <ExerciseList 
-                    exercises={
-                        this.state.data
-                    }
-                />
+            <div className="container">
+                {/* <Welcome userName="Eber Ortiz"/> */}
+                <div className="row">
+                    <ExerciseList 
+                        exercises={
+                            this.state.data
+                        }
+                    />
+                </div>
                 <AddButton />
                 
             </div>

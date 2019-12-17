@@ -2,50 +2,11 @@ import React from 'react';
 
 class ExerciseForm extends React.Component {
 
-    // constructor(props) {
-    //     super(props)
-
-    //     this.handleClick = this.handleClick.bind(this)
-    // }
-
-    // handleClick = () => {
-    //     console.log("Clicked")
-    // }
-
-    // render() {
-    //     return (
-    //         <button onClick={this.handleClick}>
-    //             Send
-    //         </button>
-    //     )
-    // }
-
-    // Inicializamos state com objeto vacio
-    //state = {}
-
-    handleSubmit = e => {
-        e.preventDefault()
-        console.log(this.state)
-        
-    }
-
-    // handleChange = e => {
-    //     // console.log(`${e.target.name}: ${e.target.value}`)
-    //     // let partialState = {}
-    //     // partialState[e.target.name] = e.target.value
-    //     // this.setState(partialState)
-
-    //     //Reducido com babel
-    //     this.setState({
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
-
     render () {
-        const { onChange, form } = this.props
+        const { onChange, onSubmit, form } = this.props
         return (
-            <div className="container mt-5">
-                <form onSubmit={this.handleSubmit}>
+            <div className="container">
+                <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <input 
                             type="text"

@@ -2,6 +2,8 @@ import React from 'react';
 import exerciseImg1 from '../images/exercise-1.png';
 import exerciseImg from '../images/exercise.png';
 import circlesImg from '../images/circles.png';
+import emptyImg from '../images/empty.png';
+
 
 import './styles/Card.css';
 
@@ -25,16 +27,16 @@ class Card extends React.Component {
     render() {
         const {title, description, img, leftColor, rightColor} = this.props;
         return (
-            <div>
+            <div className="col-md-6 col-lg-6">
                 <div className="card mx-auto Fitness-Card mb-3"
-                style={{backgroundImage: `url(${circlesImg}), linear-gradient(to right, ${leftColor}, ${rightColor})`}}
+                style={{backgroundImage: `url(${circlesImg}), linear-gradient( to right, ${leftColor || '#56CCF2'}, ${rightColor || '#2F80ED'} )`}}
                 >
                     <div className="card-body">
                         <div className="row center">
                             <div className="col-6">
                                 {/* <img src={exerciseImg} className="float-right"/> */}
 
-                                <img src={img} className="float-right" alt="rect in card component"/>
+                                <img src={img || emptyImg} className="float-right" alt="rect in card component"/>
                             </div>
                             <div className="col-6 Fitness-Card-Info">
                                 <h1>{title}</h1>
