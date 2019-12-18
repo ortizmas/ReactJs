@@ -12,17 +12,6 @@ const AddButton = () => (
     </div>
 )
 
-/*Antigo*/
-// function AddButton(props) {
-//     return(
-//         <div className="container">
-//             <div className="row justify-content-center">
-//             <Link to="/exercise/new" className="btn btn-success btn-lg">
-//                 +
-//             </Link>
-//             </div>
-//         </div>
-//     )
-// }
+
 
 export default AddButton

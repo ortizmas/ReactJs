@@ -1,28 +1,16 @@
-import React from 'react';
-import Card from './Card';
+import React, { Fragment } from 'react'
+import Card from './Card'
 
-// <></> forma de remplazar <React.Fragment></React.Fragment>
 const ExerciseList = ({exercises}) => (
-    <>
-        <div className="container">
-            <div className="row">
-                {
-                    exercises.map((exercise) => {
-                        return (
-                            <Card
-                                key={exercise.id}
-                                title={exercise.title}
-                                description={exercise.description}
-                                img={exercise.img}
-                                leftColor={exercise.leftColor}
-                                rightColor={exercise.rightColor}
-                            />
-                        )
-                    })
-                }
-            </div>
-        </div>
-    </>
+    <Fragment>
+        { exercises.map((exercise) => (
+            <Card 
+                key={exercise.id}
+                {...exercise}
+            />
+        ))}
+    </Fragment>    
 )
+
 
 export default ExerciseList
