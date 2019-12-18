@@ -51,7 +51,7 @@ class ExerciseNew extends React.Component {
                 loading: false
             })
 
-            this.props.history.push('/exercise')
+            this.props.history.push('/exercise') //Acesso graçãs a react-router
             
         } catch (error) {
             this.setState({

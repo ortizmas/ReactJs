@@ -27,21 +27,19 @@ class Card extends React.Component {
     render() {
         const {title, description, img, leftColor, rightColor} = this.props;
         return (
-            <div className="col-md-6 col-lg-6">
-                <div className="card mx-auto Fitness-Card mb-3"
-                style={{backgroundImage: `url(${circlesImg}), linear-gradient( to right, ${leftColor || '#56CCF2'}, ${rightColor || '#2F80ED'} )`}}
-                >
-                    <div className="card-body">
-                        <div className="row center">
-                            <div className="col-6">
-                                {/* <img src={exerciseImg} className="float-right"/> */}
+            <div className="card mx-auto Fitness-Card mb-3"
+            style={{backgroundImage: `url(${circlesImg}), linear-gradient( to right, ${leftColor || '#56CCF2'}, ${rightColor || '#2F80ED'} )`}}
+            >
+                <div className="card-body">
+                    <div className="row center">
+                        <div className="col-6">
+                            {/* <img src={exerciseImg} className="float-right"/> */}
 
-                                <img src={img || emptyImg} className="float-right" alt="rect in card component"/>
-                            </div>
-                            <div className="col-6 Fitness-Card-Info">
-                                <h1>{title}</h1>
-                                <p>{description}</p>
-                            </div>
+                            <img src={img || emptyImg} className="float-right" alt="rect in card component"/>
+                        </div>
+                        <div className="col-6 Fitness-Card-Info">
+                            <h1>{title}</h1>
+                            <p>{description}</p>
                         </div>
                     </div>
                 </div>

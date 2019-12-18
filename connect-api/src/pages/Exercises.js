@@ -13,7 +13,6 @@ import FatalError from './500';
 class Exercises extends React.Component {
 
     /*Novo com Babel codigo mais expresivo http://localhost:8000/api/exercises*/
-    /*https://www.youtube.com/watch?v=PW2C3_be7Ks&list=PLIddmSRJEJ0vEBB6ECegg35IQ-sWjSDdo&index=28*/
     state = {
         data: [],
         loading: true,
@@ -48,18 +47,15 @@ class Exercises extends React.Component {
         if (this.state.error)
             return <FatalError />
         return(
-            <div className="container">
+            <React.Fragment>
                 {/* <Welcome userName="Eber Ortiz"/> */}
-                <div className="row">
-                    <ExerciseList 
-                        exercises={
-                            this.state.data
-                        }
-                    />
-                </div>
+                <ExerciseList 
+                    exercises={
+                        this.state.data
+                    }
+                />
                 <AddButton />
-                
-            </div>
+            </React.Fragment>
         ) 
         
     }
