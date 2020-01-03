@@ -51,18 +51,25 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-        $product = Product::find($id);
-        return response()->json($product);
+        $product = Product::findOrFail($id);
+        return response()->json([
+            'product' => $product,
+        ]);
     }
 
     public function update(Request $request, $id)
     {
-        $product = Product::find($id);
+        /*$product = Product::find($id);
         $product->title = $request->title;
         $product->body = $request->body;
         $product->save();
 
-        return response()->json('Product update successfully.');
+        return response()->json('Product update successfully.');*/
+
+        $input = $request->all();
+        $product = Product::findOrFail($id);
+        $product->update($input);
+        return response()->json($product->find($product->id));
     }
 
     public function destroy($id)

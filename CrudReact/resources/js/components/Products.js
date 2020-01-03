@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import { Link } from 'react-router-dom'
 
-class App extends Component {
+class Products extends Component {
 
     constructor(props) {
         super(props);
@@ -15,6 +16,7 @@ class App extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderProducts = this.renderProducts.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
     }
 
     // handle change
@@ -61,12 +63,12 @@ class App extends Component {
                 </div>
                 <div className="card-body">
                     <p>{product.body}</p>
-                    <a
+                    <Link
                         to={`/${product.id}/edit`}
                         className="btn btn-sm btn-success float-right ml-2"
                     >
-                        Update
-                    </a>
+                        Alterar
+                    </Link>
                     <button 
                         onClick={() => this.handleDelete(product.id)}
                         className="btn btn-danger btn-sm float-right"
@@ -103,6 +105,13 @@ class App extends Component {
 
         // make delete request to the backend
         axios.delete(`/api/products/${id}`);
+    }
+
+    // handle update
+    handleUpdate(id) {
+        axios.put(`/api/products/${id}`).then(response => {
+            this.getProducts();
+        });
     }
 
     render() {
@@ -156,4 +165,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Products;
