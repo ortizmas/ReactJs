@@ -6,9 +6,11 @@
 
 require("./bootstrap");
 
-import React from "react";
+import React, { Component } from "react";
 import { render } from "react-dom";
 //import { Router, Route } from "react-router";
+
+import "./styles.css";
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -20,4 +22,6 @@ import { render } from "react-dom";
 
 
 require('./index');
+
+require('./rocketseat/index');
 

@@ -12,7 +12,7 @@ import ProductEdit from './components/ProductEdit';
 //     ReactDOM.render(<App />, document.getElementById('root'));
 // }
 
-if (document.getElementById('root')) {
+if (document.getElementById('product')) {
     ReactDOM.render(
         <BrowserRouter>
             <div>
@@ -22,6 +22,6 @@ if (document.getElementById('root')) {
                 </Switch>
             </div>
         </BrowserRouter>,
-        document.getElementById('root')
+        document.getElementById('product')
     );
 }

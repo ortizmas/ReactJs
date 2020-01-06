@@ -9,9 +9,11 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
+        $products = Product::paginate(5)->all();
+        //$products = \DB::table('products')->paginate(5);
+        //dd($products);
         //return response()->json($products);
         return response()->json([
             'products' => $products,
