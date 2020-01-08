@@ -97,5 +97,67 @@
                 </div>
             </div>
         </div>
+
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="container">
+            <div class="row pb-3">
+                <div class="col-md-10">
+                    <p>EDITAL DO PROCESSOS SELETIVO PARA BOLSA FILANTR&Oacute;PICA EDUCACIONAL DO ENSINO B&Aacute;SICO 2020 - ALUNOS VETERANOS</p>
+                </div>
+                <div class="col-md-2"><a class="btn btn-outline-info btn-sm" href="../../../source2019/EDITAL_1.pdf">Ver edital</a></div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10">EDITAL DE PRORROGA&Ccedil;&Atilde;O DE INSCRI&Ccedil;&Atilde;O PARA BOLSA EDUCACIONAL DO ENSINO B&Aacute;SICO - ALUNOS VETERANOS 2020</div>
+                <div class="col-md-2"><a class="btn btn-outline-info btn-sm" href="../../../source2019/EDITAL-DE-PRORROGACAO-DE-INSCRICAO-VETERANOS-2020.pdf">Ver edital</a></div>
+            </div>
+        </div>
+        <div class="container">&nbsp;</div>
+        <div class="container">EDITAL DE PRORROGA&Ccedil;&Atilde;O DE INSCRI&Ccedil;&Atilde;O PARA BOLSA EDUCACIONAL DO ENSINO B&Aacute;SICO - ALUNOS VETERANOS 2020</div>
+        <div class="container"><a href="../../../source2019/EDITAL-DE-PRORROGACAO-DE-INSCRICAO--SELECAO-VETERANOS-2020-N2.pdf"><span style="text-decoration: underline;">Ver edital</span></a></div>
+        <div class="container">&nbsp;</div>
+        <div class="container">EDITAL DE RESULTADO CONCISTENTE NA 2&ordf; ETAPA&nbsp; &nbsp;<a href="../../../source2019/Doc0137.pdf"><span style="text-decoration: underline;"> Ver edital</span></a></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">EDITAL DE PRORROGA&Ccedil;&Atilde;O DA DATA DE RESULTADO DA SELE&Ccedil;&Atilde;O (3&ordf; LISTA) ALUNOS VETERANOS 2020</div>
+                <div class="col-md-2"><a class="btn btn-outline-info btn-sm" href="https://drive.google.com/open?id=1o1lmN7Hv20v4V6EneDrLSn8x1lDRZpTd" target="_blank" rel="noopener"> Ver edital</a></div>
+            </div>
+        </div>
+        <div class="container"><br /><strong>LISTAS DE RESULTADOS SELE&Ccedil;&Atilde;O DE ALUNOS BOLSISTAS VETERANOS 2020 EDUCA&Ccedil;&Atilde;O B&Aacute;SICA</strong></div>
+        <div class="container"><br />
+            <div class="row pb-3">
+                <div class="col-md-10">
+                    <p>1&ordf; Lista - 50%</p>
+                    <p><a lass="btn btn-outline-info btn-sm" href="../../../source2019/1-LISTA-RENOVACAO-50.pdf">Ver lista</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">1&ordf; Lista - 100%</div>
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10"><a lass="btn btn-outline-info btn-sm" href="../../../source2019/1-LISTA-RENOVACAO-100.pdf">Ver lista</a></div>
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10"><strong>LISTA DE DIVULGA&Ccedil;&Atilde;O DE RESULTADOS SELE&Ccedil;&Atilde;O DE ALUNOS BOLSISTAS VETERANOS 2020 EDUCA&Ccedil;&Atilde;O B&Aacute;SICA&nbsp;</strong></div>
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10"><span style="text-decoration: underline;"><a href="../../../source2019/RENOVACAO-50-E-100.pdf">EDITAL DE DIVULGA&Ccedil;&Atilde;O DE RESULTADO COM PRAZO PARA MATR&Iacute;CULA 2&ordf; ETAPA - 100% e 50%</a></span></div>
+                <div class="col-md-10">&nbsp;</div>
+                <div class="col-md-10">&nbsp;</div>
+            </div>
+        </div>
+
+
     </body>
 </html>

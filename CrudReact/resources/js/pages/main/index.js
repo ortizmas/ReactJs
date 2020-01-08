@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import api from '../../services/api';
 
 import './styles.css'
@@ -46,8 +48,6 @@ class Main extends Component {
 
     async nextPage() {
         
-        // const page = 2;
-        // const productInfo = this.state.productInfo;
         const {page, productInfo} = this.state;
 
         if ( page === productInfo.pages) return ;
@@ -61,19 +61,21 @@ class Main extends Component {
 
     render() {
         //return <h1>Hello rocketseat {this.state.products.length}</h1>
+        const {products, page, productInfo} = this.state;
+        
         return (
             <div className="product-list">
                 {this.state.products.map(product => (
                     <article key={product.id}>
                         <strong>{product.title}</strong>
                         <p>{product.body}</p>
-                        <a href="">Accesar</a>
+                        <Link to={`/products/${product.id}`}>Accesar</Link>
                     </article>
                 ))}
 
                 <div className="actions">
-                    <button className="float-left" onClick={this.prevPage}>Anterior</button>
-                    <button className="float-right" onClick={this.nextPage}>Proximo</button>
+                    <button disabled={page === 1} className="float-left" onClick={this.prevPage}>Anterior</button>
+                    <button disabled={page === productInfo.pages} className="float-right" onClick={this.nextPage}>Proximo</button>
                 </div>
             </div>
         )

@@ -25,3 +25,5 @@ require('./index');
 
 require('./rocketseat/index');
 
+require('./examples');
+

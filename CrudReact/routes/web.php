@@ -19,6 +19,12 @@ Route::get('/novo', function () {
     return view('product');
 });
 
+Route::get('/examples', function () {
+    return view('examples');
+});
+
+Route::view('/products/{id?}', 'inicio');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
