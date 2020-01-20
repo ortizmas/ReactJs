@@ -5,6 +5,7 @@ import Toggle from '../components/Examples/Toggle';
 import LoginButton from '../components/Examples/LoginButton';
 import Greeting from '../components/Examples/Conditionals';
 import LoginControl from '../components/Examples/LoginControl';
+import CategorySearch from '../components/Examples/Categories/CategorySearch';
 
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
                 <LoginControl />
             </div>
             <div className="col-md">
+                <CategorySearch />
             </div>
             <div className="col-md">
             </div>

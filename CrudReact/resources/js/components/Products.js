@@ -9,12 +9,15 @@ class Products extends Component {
         this.state = {
             title: '',
             body: '',
+            category_id: '',
+            categories: [],
             products: []
         }
         // bind
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderProducts = this.renderProducts.bind(this);
+        this.renderCategories = this.renderCategories.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
     }
@@ -36,7 +39,8 @@ class Products extends Component {
         axios
         .post('/api/products', {
             title: this.state.title,
-            body: this.state.body
+            body: this.state.body,
+            category_id: this.state.category_id,
         })
         .then(response => {
             console.log('From handle submit', response);
@@ -92,9 +96,34 @@ class Products extends Component {
     }
 
     //lifecycle method
+    // UNSAFE_componentWillMount() {
+    //     this.getProducts();
+    // }
+
+    // render products
+    renderCategories() {
+        return this.state.categories.map(category => (
+            <option key={category.id} value={category.id}>{category.name}</option>
+        ))
+    }
+
+    // get all products from backend
+    getCategories() {
+        axios.get('/api/categories').then((
+            response // console.log(response.data.products)
+        ) => 
+            this.setState( {
+                categories: [...response.data.categories]
+            })
+        ); 
+    }
+
+    //lifecycle method
     UNSAFE_componentWillMount() {
         this.getProducts();
+        this.getCategories();
     }
+    
 
     // handle delete
     handleDelete(id) {
@@ -129,6 +158,19 @@ class Products extends Component {
                             <div className="card-body">
 
                                 <form onSubmit={this.handleSubmit}>
+                                    <div className="form-group">
+                                        <select  name="category_id" className="form-control" onChange={this.handleChange} required>
+                                            <option  value="">Selecionar categoria</option>
+                                            {this.renderCategories()}
+                                        </select>
+                                        {/* <select name="category_id" className="form-control" onChange={this.handleChange} required>
+                                           <option value="">Selecionar categoria</option>
+                                            <option value="1">Phones</option>
+                                            <option value="2">Notebooks</option>
+                                            <option value="3">Desktops</option>
+                                            <option value="4">CPUs</option>
+                                        </select> */}
+                                    </div>
                                     <div className="form-group">
                                         <input
                                             name="title"

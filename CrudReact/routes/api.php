@@ -18,3 +18,4 @@ use Illuminate\Http\Request;
 // });
 
 Route::resource('products', 'Admin\ProductController');
+Route::resource('categories', 'Admin\CategoryController');
