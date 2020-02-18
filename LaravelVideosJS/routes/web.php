@@ -13,8 +13,13 @@
 Route::get('/', function () {
     return view('videos');
 });
+
 Route::get('/vimeo', function () {
     return view('vimeo');
+});
+
+Route::get('/vimeo-playlist', function () {
+    return view('vimeo-playlist');
 });
 
 Route::get('/welcome', function () {
