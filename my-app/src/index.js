@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import ShoppingList from './shopping';
+import Soma from './soma';
+import Form from './form';
+import Props from './props';
+
+
+
 
 class Square extends React.Component {
   render() {
@@ -71,6 +78,15 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <div>
+    <Game />
+    <ShoppingList name="Eber"/>
+    <Soma />
+    <Form />
+    <Props />
+
+  </div>,
+
   document.getElementById('root')
+  
 );

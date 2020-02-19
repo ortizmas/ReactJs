@@ -30,6 +30,7 @@
                     >
                     </video> --}}
 
+
                     <video id="vid1" class="video-js vjs-default-skin vjs-fluid" controls width="100" height="264"></video>
                     <!--   <video id="vid1" class="video-js vjs-default-skin vjs-fluid" controls width="640" height="264" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'>
                         </video> -->
@@ -73,7 +74,7 @@
 @section('scripts')
     <script src="{{ mix('js/videojs.js') }}"></script>
     <script src="{{ asset('js/Youtube.min.js') }}"></script>
-    <!--<script src="https://vjs.zencdn.net/7.6.6/video.js"></script> 
+    <!--<script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
     <script src="{{ asset('js/videojs-vimeo.min.js') }}"></script>-->
     {{-- <script src="https://cdn.jsdelivr.net/npm/videojs-vimeo-v2@2.0.2/src/Vimeo.min.js"></script> --}}
 
@@ -145,7 +146,7 @@
                 });
             } else {
                 //$("#vid1 iframe, #vid1 .vjs-iframe-blocker").remove();
-                if (!ext) 
+                if (!ext)
                     ext = "mp4";
 
                 var ext = vidURL.split('.').pop();
@@ -158,17 +159,17 @@
                 "type": "video/" + ext,
                 "src": vidURL
                 //"youtube": { "iv_load_policy": 3 }
-                
+
             });
 
 
-            if (poster) 
+            if (poster)
                 vgsPlayer.poster(poster);
 
             vgsPlayer.play();
         }
 
-        
+
 
         function ytVidId(url) {
             //var p = /^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?(?=.*v=((\w|-){11}))(?:\S+)?$/;
@@ -221,5 +222,5 @@
 
     </script>
 
-    
+
 @endsection
