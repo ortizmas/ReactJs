@@ -7,12 +7,23 @@ const HelloWorld = (props) => (
 );
 
 class Props extends React.Component {
-    // constructor(props){
-    //     super(props)
-    //     this.state = {
+    constructor(props){
+        super(props)
+        this.state = {
+            nome: "Mateus",
+            numero: 0
+        }
+        this.addCont = this.addCont.bind(this);
+    }
 
-    //     }
-    // }
+    addCont() {
+        const count = this.state.numero;
+        this.setState({
+            numero: count + 1
+        })
+        console.log(this.state.numero);
+        
+    }
 
     render(){
         return(
@@ -20,7 +31,11 @@ class Props extends React.Component {
                 <HelloWorld name="Eber mais"/>
                 <HelloWorld name="Ildor mais" />
                 <HelloWorld name="Karolyni Irineu" />
+                <HelloWorld name={this.state.nome} />
+                <span>{this.state.numero * 2}</span>
+                <button className="btn btn-primary" onClick={this.addCont}>+</button>
             </div>
+            
         )
     }
 }

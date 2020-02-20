@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -5,6 +7,7 @@ import ShoppingList from './shopping';
 import Soma from './soma';
 import Form from './form';
 import Props from './props';
+import Input from './input'
 
 
 
@@ -84,7 +87,9 @@ ReactDOM.render(
     <Soma />
     <Form />
     <Props />
-
+    <hr/>
+    <h1>Trabalhando com Inputs</h1>
+    <Input />
   </div>,
 
   document.getElementById('root')
